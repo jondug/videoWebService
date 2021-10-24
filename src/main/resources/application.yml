@@ -1,0 +1,28 @@
+server:
+  #服务器运行端口
+  port: 8080
+
+spring:
+  datasource:
+    #数据库链接url
+    url: jdbc:mysql://111.230.187.247:25836/bilibili?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    #数据库账号密码
+    username: root
+    password: 0730@Ljh
+    #数据库驱动类
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  devtools:
+    restart:
+      poll-interval: 2s
+      quiet-period: 1999ms
+  servlet:
+    #传输文件大小
+    multipart:
+      max-file-size: 5000MB
+      max-request-size: 5000MB
+
+mybatis:
+  #mapper文件
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
